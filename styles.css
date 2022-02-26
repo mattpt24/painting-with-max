@@ -147,7 +147,7 @@ grid-template-areas:
 }
 
 .view-more {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     background: linear-gradient(-45deg,#ff2d2d ,#fd8561, #e73c7e, #23a6d5, #51ff00);
 	background-size: 400% 400%;
 	animation: gradient 9s ease infinite;
@@ -170,8 +170,7 @@ grid-template-areas:
 
 .view-more:hover {
     transition: all .3s ease;
-    background: mediumpurple;
-    color: #000;
+    cursor: pointer;
 }
 
 
