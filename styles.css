@@ -294,21 +294,30 @@ font-size: 1rem;
 
 .ending {
     margin-top: 70px;
+}
+
+.ending footer {
     text-align: center;
+    font-weight: lighter;
 }
 
 button  {
     transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
-    background: #fff;
+    background: mediumpurple;
     padding: 1rem 2rem;
-    border: solid 3px #000;
+    border: solid 3px mediumpurple;
     border-radius: 4px;
-    color: #000;
+    color: #fff!important;
     letter-spacing: 4px;
-    margin: 30px 0;
+    margin: 30px 0 30px 0;
     outline: none;
-    
+}
+
+button:nth-child(1) {
+    margin-top: 0!important;
+    position: relative;
+    right: 5px;
 }
 
 button a{
@@ -342,7 +351,8 @@ button a{
 
 button:hover {
     transition: all 0.3s ease;
-    background: mediumpurple;
+    background: none;
+    color: mediumpurple;
     cursor:pointer;
     border-color: mediumpurple;
 }
