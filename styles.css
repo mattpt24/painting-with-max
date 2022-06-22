@@ -18,17 +18,19 @@ background: #fff;
 }
 
 nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     animation: entry 0.5s ease;
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    padding: 5px;
     background: #fff;
-    position: fixed;
-    width: 100%;
-    box-shadow: 0 0 10px grey;
-    z-index: 100;
+    width: 100vw;
+    padding: .4rem .5rem;
+    box-shadow: 0 0 3px grey;
+    z-index: 999;
 }
 
 .brand-logo {
@@ -40,6 +42,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     width: 30%;
+    margin-left: 10px;
     list-style: none;
     text-decoration: none;
 }
@@ -96,19 +99,20 @@ color: #000;
 
 
 
-.item1{grid-area: p1; background-image: url("tiger.jpg");}
-.item2{grid-area: p2;background-image: url("lion.jpg");}
-.item3{grid-area: p3;background-image: url("two-dogs.jpg");}
-.item4{grid-area: p4;background-image: url("elvis.jpg");}
-.item5{grid-area: p5;background-image: url("motocycle.jpg");}
-.item6{grid-area: p6;background-image: url("hawk.jpg");}
-.item7{grid-area: p7;background-image: url("river.jpg");}
-.item8{grid-area: p8;background-image: url("goose.jpg");}
-.item9{grid-area: p9;background-image: url("cottages.jpg");}
-.item10{grid-area: p10;background-image: url("magic.jpg");}
+.item1{grid-area: p1; background-image: url("tiger.jpg");background-size: cover;}
+.item2{grid-area: p2;background-image: url("lion.jpg");background-size: cover;}
+.item3{grid-area: p3;background-image: url("two-dogs.jpg");background-size: cover;}
+.item4{grid-area: p4;background-image: url("elvis.jpg");background-size: cover;}
+.item5{grid-area: p5;background-image: url("motocycle.jpg");background-size: cover;}
+.item6{grid-area: p6;background-image: url("hawk.jpg");background-size: cover;}
+.item7{grid-area: p7;background-image: url("river.jpg");background-size: cover;}
+.item8{grid-area: p8;background-image: url("goose.jpg");background-size: cover;}
+.item9{grid-area: p9;background-image: url("cottages.jpg");background-size: cover;}
+.item10{grid-area: p10;background-image: url("magic.jpg");background-size: cover;}
 
 .container {
     padding: 75px 75px 25px 75px;
+    overflow: hidden;
 }
 
 
@@ -117,20 +121,22 @@ color: #000;
     background-size: cover;
     background-position: center center;
     padding: 50px;
-    height: 400px;
-    width: 350px;
+    height: 550px;
+    width: 100%;
     text-align: center;
     margin: 0 auto;
 }
 
 .grid-container {
+    display: none;
     margin-top: 100px;
-    border-radius: 4px;
+    border-radius: 10px;
 	background: linear-gradient(-45deg,#ff2d2d ,#fd8561, #e73c7e, #23a6d5, #51ff00);
 	background-size: 400% 400%;
-	animation: gradient 9s ease infinite;
-    padding: 50px;
+	animation: gradient 6s ease infinite;
+    padding: 3.5rem;
     grid-gap: 35px;
+    overflow: hidden;
 display: grid;
 grid-template-areas: 
 'p1 p1 p2 p2 p3 p3'
@@ -246,6 +252,7 @@ text-align: center;
     background: #000;
     color: #fff;
     padding: 50px 0;
+
 }
 
 .availability {
@@ -291,7 +298,7 @@ font-size: 1rem;
 }
 
 button  {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     font-family: 'Poppins', sans-serif;
     background: #fff;
     padding: 1rem 2rem;
@@ -334,7 +341,7 @@ button a{
 
 
 button:hover {
-    transition: all 0.5s ease;
+    transition: all 0.3s ease;
     background: mediumpurple;
     cursor:pointer;
     border-color: mediumpurple;
@@ -346,18 +353,20 @@ button:hover {
     background: linear-gradient(-45deg,#ff2d2d ,#fd8561, #e73c7e, #23a6d5);
 	background-size: 400% 400%;
 	animation: gradient 9s ease infinite;
-    padding: 60px;
+    padding: 4rem 0;
     text-align: center;
 }
 
 .photos {
     float: left;
     width: 33.3333%;
-    margin-top: 10px;
+    height: 450px;
+    background-size: cover;
+    margin-top: 7rem;
 }
 
 .photos img {
-    height: 440px;
+    height: 500px;
     width: 410px;
 }
 
@@ -374,12 +383,18 @@ button:hover {
 @media only screen and (max-width: 1100px) {
 
     nav {
+        padding: 0px;
+        position: absolute;
+    }
+
+    .brand-logo {
         padding: 5px;
     }
 
+
     .nav-links {
         font-size: 13px;
-        width: 70%;
+        width: 80%;
     }
 
     .socials {
@@ -387,11 +402,14 @@ button:hover {
     }
 
 .container {
-    padding: 30px 5px;
+    padding: 6rem 0;
+    margin: 0 auto;
 }
 
     .grid-container {
-        padding: 5px;
+        overflow: hidden;
+        margin: 0 auto;
+        padding: 20px;
         grid-template-areas:
         'p1 p1 p1 p1 p1 p1'
         'p2 p2 p2 p2 p2 p2'
@@ -405,12 +423,18 @@ button:hover {
         'p10 p10 p10 p10 p10 p10';
     }
 
+    #availability {
+        padding: 6rem 0;
+    }
+
     #about-section {
-padding: 5px;
+padding: 0px;
     }
 
     .about-picture {
-        width: 100%;
+        width: 100vw;
+        margin: 0 auto;
+        background-size: cover;
     }
 
     .about-text {
@@ -422,8 +446,34 @@ padding: 5px;
         width: 90%;
     }
 
+    .availability {
+        font-size: 3rem;
+        position: relative;
+        z-index: 1;
+    }
+
     #contact {
+        font-family: 'Poppins', sans-serif;
         text-align: center;
+        padding: 70px 0px 5px 0px;
+    }
+
+    .contact-title {
+        font-size: 4rem;
+    }
+
+    .contact-dets {
+        font-size: 1.3rem;
+        margin: 20px 0;
+    }
+
+    .icon {
+        color: mediumpurple!important;
+        margin-right: 20px;
+    }
+
+    .contact-icon, .divider {
+        display: none;
     }
 
     .contact-socials {
@@ -433,15 +483,19 @@ padding: 5px;
 
         .photos {
             width: 100%;
+            margin: 0 auto;
         }
 
         #container {
-            padding: 50px;
+            padding: 0px;
+            width: 90vw;
         }
 
         .photos img {
-            height: 400px;
-            width: 350px;
+            height: 500px;
+            object-fit: cover;
+            position: relative;
+            z-index: 0;
         }
 }
 
