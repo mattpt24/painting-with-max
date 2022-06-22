@@ -371,7 +371,17 @@ button:hover {
 }
 
 
+.website-by, a {
+    transition: all .3s ease;
+    color: darkgrey;
+    font-weight: lighter;
+    text-decoration: none;
+}
 
+.website-by a:hover {
+    transition: all .3s ease;
+    color: mediumpurple;
+}
 
 
 
