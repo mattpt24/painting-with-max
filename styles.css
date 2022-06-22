@@ -41,7 +41,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 30%;
+    width: 25%;
     margin-left: 10px;
     list-style: none;
     text-decoration: none;
@@ -404,7 +404,9 @@ button:hover {
 
     nav {
         padding: 0px;
-        position: absolute;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
 
     .brand-logo {
@@ -414,7 +416,8 @@ button:hover {
 
     .nav-links {
         font-size: 13px;
-        width: 80%;
+        width: 100%;
+        margin-left: 0;
     }
 
     .socials {
